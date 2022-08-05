@@ -16,7 +16,7 @@ radio.onReceivedString(function (receivedString) {
         robotbit.MotorRunDual(
         robotbit.Motors.M1A,
         150,
-        robotbit.Motors.M2A,
+        robotbit.Motors.M2B,
         0
         )
         basic.pause(2000)
@@ -26,7 +26,7 @@ radio.onReceivedString(function (receivedString) {
         robotbit.MotorRunDual(
         robotbit.Motors.M1A,
         0,
-        robotbit.Motors.M2A,
+        robotbit.Motors.M2B,
         150
         )
         basic.pause(2000)
@@ -60,7 +60,7 @@ strip.show()
 // set motor to rotate in direction based on number ( 1 is clockwise , -1 is anti-clockwise ) at speed determined by value received from transmitter. In this case a Slide Potentiometer
 basic.forever(function () {
     robotbit.MotorRun(robotbit.Motors.M1A, Speed * Number2)
-    robotbit.MotorRun(robotbit.Motors.M2A, Speed * Number2)
+    robotbit.MotorRun(robotbit.Motors.M2B, Speed * Number2)
     if (Speed * Number2 >= 0) {
         strip.showColor(neopixel.colors(NeoPixelColors.Blue))
         strip.show()
